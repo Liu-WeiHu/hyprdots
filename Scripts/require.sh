@@ -33,3 +33,5 @@ sed -i "/bind = \$mainMod, mouse_up/cbind = \$mainMod, mouse_up, workspace, e+1"
 
 sed -i "/misc/a\    mouse_move_enables_dpms = true" /home/liu/.config/hypr/hyprland.conf
 sed -i "/misc/a\    key_press_enables_dpms = true" /home/liu/.config/hypr/hyprland.conf
+
+sed -i '/rotate/a\        "on-click": "sleep.sh",' /home/liu/.config/waybar/modules/idle_inhibitor.jsonc
