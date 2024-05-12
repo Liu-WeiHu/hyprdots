@@ -4,7 +4,7 @@ sed -i	"/export s_fontpx=/cexport s_fontpx=\$(( b_height*45/100 ))" /home/liu/.l
 sed -i	"/export x3g_margin=/c\        export x3g_margin=0" /home/liu/.local/share/bin/wbarstylegen.sh
 
 cat << EOF >> /home/liu/.config/waybar/config.ctl
-0|28|top|( clock tray ) ( hyprland/workspaces wlr/taskbar )|( hyprland/window )|( network cpu memory ) ( backlight pulseaudio battery pulseaudio#microphone custom/keybindhint custom/cliphist custom/notifications custom/power )
+0|28|top|( clock tray ) ( hyprland/workspaces wlr/taskbar )|( hyprland/window )|( network cpu memory ) ( backlight pulseaudio battery pulseaudio#microphone custom/cliphist custom/notifications custom/power )
 EOF
 
 sed -i '/"interval"/c\        "interval": 2,' /home/liu/.config/waybar/modules/cpu.jsonc
@@ -33,3 +33,5 @@ sed -i "/bind = \$mainMod, mouse_up/cbind = \$mainMod, mouse_up, workspace, e+1"
 
 sed -i "/misc/a\    mouse_move_enables_dpms = true" /home/liu/.config/hypr/hyprland.conf
 sed -i "/misc/a\    key_press_enables_dpms = true" /home/liu/.config/hypr/hyprland.conf
+
+sed -i "s/grimblast/grimblast --cursor/g" /home/liu/.local/share/bin/screenshot.sh
