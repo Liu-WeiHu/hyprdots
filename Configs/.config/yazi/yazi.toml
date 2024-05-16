@@ -39,7 +39,7 @@ open = [
 reveal = [
 	{ run = 'open -R "$1"',                          desc = "Reveal", for = "macos" },
 	{ run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
-	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
+	{ run = '''google-chrome-stable "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
 ]
 extract = [
 	{ run = 'unar "$1"', desc = "Extract here", for = "unix" },

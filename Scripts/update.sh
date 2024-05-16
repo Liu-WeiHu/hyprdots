@@ -10,8 +10,9 @@ function obtain_git_branch {
 result=`obtain_git_branch`
 if [ "$result" != "current" ]
   then
-    echo "git branch is not current"
-    exit 1
+    git checkout current
+    sleep 1
+    echo "----------- git checkout current done ------------"
 fi
 
 
@@ -43,5 +44,7 @@ cp /home/liu/.config/user-dirs.dirs /home/liu/Documents/hyprdots/Configs/.config
 cp /home/liu/Documents/require.sh /home/liu/Documents/hyprdots/Scripts/
 
 cp /home/liu/Documents/update.sh /home/liu/Documents/hyprdots/Scripts/
+
+cp /home/liu/Documents/jetbra/active-goland.sh /home/liu/Documents/hyprdots/Scripts/ 
 
 echo "----------------- success ---------------------"
