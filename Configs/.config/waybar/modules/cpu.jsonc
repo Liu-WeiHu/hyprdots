@@ -1,5 +1,5 @@
     "cpu": {
-        "interval": 10,
+        "interval": 2,
         "format": "󰍛 {usage}%",
         "rotate": ${r_deg},
         "format-alt": "{icon0}{icon1}{icon2}{icon3}",
