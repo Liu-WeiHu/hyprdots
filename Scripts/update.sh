@@ -35,10 +35,6 @@ cp /home/liu/.config/code-flags.conf /home/liu/Documents/hyprdots/Configs/.confi
 
 cp /home/liu/.config/electron-flags.conf /home/liu/Documents/hyprdots/Configs/.config/
 
-cp /home/liu/.config/electron22-flags.conf /home/liu/Documents/hyprdots/Configs/.config/
-
-cp /home/liu/.config/qq-electron-flags.conf /home/liu/Documents/hyprdots/Configs/.config/
-
 cp /home/liu/.config/user-dirs.dirs /home/liu/Documents/hyprdots/Configs/.config/
 
 cp /home/liu/Documents/require.sh /home/liu/Documents/hyprdots/Scripts/
