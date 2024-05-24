@@ -63,7 +63,7 @@ qt6-wayland                                            # wayland support in qt6
 kitty                                                  # terminal
 # dolphin                                              # kde file manager
 ark                                                    # kde file archiver
-neovim                                                 # terminal text editor
+vim                                                    # terminal text editor
 visual-studio-code-bin                                 # ide text editor
 
 # --------------------------------------------------- // Shell
