@@ -43,4 +43,6 @@ cp /home/liu/Documents/update.sh /home/liu/Documents/hyprdots/Scripts/
 
 cp /home/liu/Documents/jetbra/active-goland.sh /home/liu/Documents/hyprdots/Scripts/ 
 
+cp /home/liu/.vimrc /home/liu/Documents/hyprdots/Configs/ 
+
 echo "----------------- success ---------------------"
