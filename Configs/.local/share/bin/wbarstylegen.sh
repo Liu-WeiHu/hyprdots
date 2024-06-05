@@ -30,13 +30,13 @@ export c_radius=$(( b_height*25/100 ))   # block rad 25% of height {type2}
 export t_radius=$(( b_height*25/100 ))   # tooltip rad 25% of height
 export e_margin=$(( b_height*30/100 ))   # block margin 30% of height
 export e_paddin=$(( b_height*10/100 ))   # block padding 10% of height
-export g_margin=$(( b_height*20/100 )) 
+export g_margin=$(( b_height*10/100 )) 
 export g_paddin=$(( b_height*15/100 ))   # module padding 15% of height
 export w_radius=$(( b_height*30/100 ))   # workspace rad 30% of height
 export w_margin=$(( b_height*10/100 ))   # workspace margin 10% of height
 export w_paddin=$(( b_height*10/100 ))   # workspace padding 10% of height
 export w_padact=$(( b_height*40/100 ))   # workspace active padding 40% of height
-export s_fontpx=$(( b_height*45/100 )) 
+export s_fontpx=$(( b_height*50/100 )) 
 
 if [ $b_height -lt 30 ] ; then
     export e_paddin=0

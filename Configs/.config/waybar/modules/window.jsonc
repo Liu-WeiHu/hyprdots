@@ -12,6 +12,6 @@
             "(.*)Spotify": "Spotify 󰓇",
             "(.*)Steam": "Steam 󰓓"
         },
-        "max-length": 60
+        "max-length": 40
     },
 
