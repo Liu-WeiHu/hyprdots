@@ -12,13 +12,13 @@ if [ $? -ne 0 ]; then
 fi
 
 # grub
-if pkg_installed grub && [ -f /boot/grub/grub.cfg ]; then
+if pkg_installed grub && [ -f /efi/grub/grub.cfg ]; then
     echo -e "\033[0;32m[BOOTLOADER]\033[0m detected // grub"
 
-    if [ ! -f /etc/default/grub.t2.bkp ] && [ ! -f /boot/grub/grub.t2.bkp ]; then
+    if [ ! -f /etc/default/grub.t2.bkp ] && [ ! -f /efi/grub/grub.t2.bkp ]; then
         echo -e "\033[0;32m[BOOTLOADER]\033[0m configuring grub..."
         sudo cp /etc/default/grub /etc/default/grub.t2.bkp
-        sudo cp /boot/grub/grub.cfg /boot/grub/grub.t2.bkp
+        sudo cp /efi/grub/grub.cfg /efi/grub/grub.t2.bkp
 
         if nvidia_detect; then
             echo -e "\033[0;32m[BOOTLOADER]\033[0m nvidia detected, adding nvidia_drm.modeset=1 to boot option..."
@@ -47,7 +47,7 @@ if pkg_installed grub && [ -f /boot/grub/grub.cfg ]; then
             /^#GRUB_SAVEDEFAULT=true/c\GRUB_SAVEDEFAULT=true" /etc/default/grub
         fi
 
-        sudo grub-mkconfig -o /boot/grub/grub.cfg
+        sudo grub-mkconfig -o /efi/grub/grub.cfg
     else
         echo -e "\033[0;33m[SKIP]\033[0m grub is already configured..."
     fi
