@@ -2,6 +2,21 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
+      taplo = {
+        keys = {
+          {
+            "K",
+            function()
+              if vim.fn.expand("%:t") == "Cargo.toml" and require("crates").popup_available() then
+                require("crates").show_popup()
+              else
+                vim.lsp.buf.hover()
+              end
+            end,
+            desc = "Show Crate Documentation",
+          },
+        },
+      },
       gopls = {
         settings = {
           gopls = {
@@ -42,6 +57,9 @@ return {
       },
     },
     setup = {
+      rust_analyzer = function()
+        return true
+      end,
       gopls = function(_, opts)
         -- workaround for gopls not supporting semanticTokensProvider
         -- https://github.com/golang/go/issues/54531#issuecomment-1464982242
