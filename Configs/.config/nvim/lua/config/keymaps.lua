@@ -11,14 +11,14 @@ vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 
 -- 使用黑洞寄存器配置 s, S, c, C 命令
-vim.keymap.set("n", "s", '"_s', { noremap = true, silent = true })
-vim.keymap.set("n", "S", '"_S', { noremap = true, silent = true })
+-- vim.keymap.set("n", "s", '"_s', { noremap = true, silent = true })
+-- vim.keymap.set("n", "S", '"_S', { noremap = true, silent = true })
 vim.keymap.set("n", "c", '"_c', { noremap = true, silent = true })
 vim.keymap.set("n", "C", '"_C', { noremap = true, silent = true })
 
 -- 处理可视模式下的情况
-vim.keymap.set("v", "s", '"_s', { noremap = true, silent = true })
-vim.keymap.set("v", "S", '"_S', { noremap = true, silent = true })
+-- vim.keymap.set("v", "s", '"_s', { noremap = true, silent = true })
+-- vim.keymap.set("v", "S", '"_S', { noremap = true, silent = true })
 vim.keymap.set("v", "c", '"_c', { noremap = true, silent = true })
 vim.keymap.set("v", "C", '"_C', { noremap = true, silent = true })
 
@@ -33,6 +33,12 @@ local lazyterm = function()
   LazyVim.terminal(nil, {
     cwd = LazyVim.root(),
     size = { width = 0.6, height = 0.4 },
+    border = "rounded",
+    title = "码农万岁",
+    title_pos = "center",
+    style = "minimal",
+    persistent = true,
+    noautocmd = true,
   })
 end
 vim.keymap.set("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
