@@ -1,6 +1,6 @@
 xdg-desktop-portal-gtk
 less
-archlinux-xdg-menu 
+archlinux-xdg-menu
 tealdeer
 btop
 fcitx5-breeze
@@ -11,12 +11,12 @@ unarchiver
 ffmpegthumbnailer
 ripgrep
 xdg-user-dirs
-xorg-xrdb
+# xorg-xrdb
 swayidle
 
-obs-studio
-linuxqq-nt-bwrap
-wechat-universal-bwrap
-podman
-dbeaver
-nvtop
+# obs-studio
+# linuxqq-nt-bwrap
+# wechat-universal-bwrap
+# podman
+# dbeaver
+# nvtop
