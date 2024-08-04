@@ -27,23 +27,3 @@ vim.keymap.set("i", "<A-h>", "<Left>", { noremap = true, silent = true })
 vim.keymap.set("i", "<A-j>", "<Down>", { noremap = true, silent = true })
 vim.keymap.set("i", "<A-k>", "<Up>", { noremap = true, silent = true })
 vim.keymap.set("i", "<A-l>", "<Right>", { noremap = true, silent = true })
-
--- 修改默认终端大小
-local lazyterm = function()
-  LazyVim.terminal(nil, {
-    cwd = LazyVim.root(),
-    size = { width = 0.6, height = 0.4 },
-    border = "rounded",
-    title = "码农万岁",
-    title_pos = "center",
-    style = "minimal",
-    persistent = true,
-    noautocmd = true,
-  })
-end
-vim.keymap.set("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
-vim.keymap.set("n", "<leader>fT", function()
-  LazyVim.terminal()
-end, { desc = "Terminal (cwd)" })
-vim.keymap.set("n", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
-vim.keymap.set("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })

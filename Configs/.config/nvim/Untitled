@@ -1,0 +1,4 @@
+return {
+    { "theHamsta/nvim-dap-virtual-text", enabled = false },
+    { "iamcco/markdown-preview.nvim", enabled = false },
+    }
