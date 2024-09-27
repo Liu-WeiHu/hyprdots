@@ -71,6 +71,11 @@ alias pa='$aurhelper -Ss' # list availabe package
 alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 alias vc='code' # gui code editor
+alias svi='sudoedit' # gui code editor
+alias pc='podman-compose'
+alias kdiff='kitten diff'
+alias kssh='kitten ssh'
+export LESS='-N -g -i -M'
 
 # Handy change dir shortcuts
 alias ..='cd ..'
@@ -81,8 +86,6 @@ alias .5='cd ../../../../..'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
-
-export LESS='-N -g -i -M'
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
