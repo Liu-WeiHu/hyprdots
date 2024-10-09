@@ -6,15 +6,5 @@ return {
         return true
       end,
     },
-
-    servers = {
-      gopls = {
-        settings = {
-          gopls = {
-            usePlaceholders = false,
-          },
-        },
-      },
-    },
   },
 }
