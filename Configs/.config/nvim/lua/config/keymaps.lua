@@ -30,19 +30,19 @@ vim.keymap.set("i", "<A-l>", "<Right>", { noremap = true, silent = true })
 
 -- 修改默认终端大小
 local lazyterm = function()
-    LazyVim.terminal(nil, {
-        cwd = LazyVim.root(),
-        size = { width = 0.7, height = 0.7 },
-        border = "rounded",
-        title = "码农万岁",
-        title_pos = "center",
-        style = "minimal",
-        persistent = true,
-        noautocmd = true,
-    })
+  LazyVim.terminal(nil, {
+    cwd = LazyVim.root(),
+    size = { width = 0.5, height = 0.5 },
+    border = "rounded",
+    title = "码农万岁",
+    title_pos = "center",
+    style = "minimal",
+    persistent = true,
+    noautocmd = true,
+  })
 end
 vim.keymap.set("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
 vim.keymap.set("n", "<leader>fT", function()
-    LazyVim.terminal()
+  LazyVim.terminal()
 end, { desc = "Terminal (cwd)" })
 vim.keymap.set("n", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
