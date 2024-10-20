@@ -1,12 +1,14 @@
 xdg-desktop-portal-gtk
 less
-archlinux-xdg-menu
-tealdeer
+# archlinux-xdg-menu
+# tealdeer
 btop
 fcitx5-breeze
 pot-translation
 yazi
 ffmpegthumbnailer
+zoxide 
+chafa
 xdg-user-dirs
 # xorg-xrdb
 swayidle
