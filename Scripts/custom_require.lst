@@ -7,15 +7,15 @@ fcitx5-breeze
 pot-translation
 yazi
 ffmpegthumbnailer
-zoxide 
+zoxide
 chafa
 xdg-user-dirs
-# xorg-xrdb
+xorg-xrdb
 swayidle
-
-# obs-studio
+atuin
+obs-studio
 # linuxqq-nt-bwrap
 # wechat-universal-bwrap
 # podman
 # dbeaver
-# nvtop
+nvtop
