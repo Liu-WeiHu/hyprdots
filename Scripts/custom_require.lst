@@ -11,9 +11,10 @@ zoxide
 chafa
 xdg-user-dirs
 xorg-xrdb
-swayidle
 atuin
 obs-studio
+hypridle
+hyprlock
 # linuxqq-nt-bwrap
 # wechat-universal-bwrap
 # podman
