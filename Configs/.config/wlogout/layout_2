@@ -1,8 +1,8 @@
 {
-    "label" : "lock",
-    "action" : "swaylock",
-    "text" : "Lock",
-    "keybind" : "l"
+     "label" : "lock",
+     "action" : "hyprlock",
+     "text" : "Lock",
+     "keybind" : "l"
 }
 
 {
