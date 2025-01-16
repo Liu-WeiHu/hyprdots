@@ -86,7 +86,7 @@ rules = [
     ] },
     # Image
     { mime = "image/*", use = [
-        "open",
+        "image",
         "reveal",
     ] },
     # Media
