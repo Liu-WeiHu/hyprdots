@@ -8,15 +8,14 @@ pot-translation
 yazi
 ffmpegthumbnailer
 zoxide
+fd
 chafa
 xdg-user-dirs
 xorg-xrdb
 atuin
-obs-studio
-hypridle
-hyprlock
+nvtop
+;obs-studio
 # linuxqq-nt-bwrap
 # wechat-universal-bwrap
 # podman
 # dbeaver
-nvtop
