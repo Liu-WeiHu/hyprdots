@@ -17,9 +17,30 @@ q)
     echo "正在录制选定区域..."
     wl-screenrec -g "$(slurp)" --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file" &
     ;;
-w)
+e)
     echo "正在录制整个屏幕..."
     wl-screenrec --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file" &
+    ;;
+w)
+    echo "正在选择应用窗口..."
+    # 使用 hyprctl 获取应用窗口的几何信息
+    window_info=$(hyprctl activewindow -j)
+    if [ -z "$window_info" ]; then
+        echo "未找到活动窗口！"
+        exit 1
+    fi
+
+    # 解析窗口的几何信息
+    x=$(echo "$window_info" | jq '.at[0]')
+    y=$(echo "$window_info" | jq '.at[1]')
+    width=$(echo "$window_info" | jq '.size[0]')
+    height=$(echo "$window_info" | jq '.size[1]')
+
+    # 格式化几何信息
+    geometry="${x},${y} ${width}x${height}"
+
+    echo "正在录制应用窗口：$geometry"
+    wl-screenrec -g "$geometry" --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file" &
     ;;
 *)
     echo "无效参数：请传入 'q' 或 'w'"
