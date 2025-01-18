@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# 检查是否传入了参数
+if [ $# -eq 0 ]; then
+    echo "请传入参数：'q' 或 'w'"
+    exit 1
+fi
+
+# 生成带时间戳的文件名
+recording_name="recording_$(date +'%Y-%m-%d_%H-%M-%S').mkv"
+output_dir="/home/liu/Media/Videos/recording"
+output_file="${output_dir}/${recording_name}"
+
+# 根据参数执行不同的命令
+case "$1" in
+q)
+    echo "正在录制选定区域..."
+    wl-screenrec -g "$(slurp)" --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file"
+    ;;
+w)
+    echo "正在录制整个屏幕..."
+    wl-screenrec --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file"
+    ;;
+*)
+    echo "无效参数：请传入 'q' 或 'w'"
+    exit 1
+    ;;
+esac
+
+echo "录制完成，文件保存为：$output_file"
