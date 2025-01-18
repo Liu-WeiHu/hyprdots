@@ -15,11 +15,11 @@ output_file="${output_dir}/${recording_name}"
 case "$1" in
 q)
     echo "正在录制选定区域..."
-    wl-screenrec -g "$(slurp)" --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file"
+    wl-screenrec -g "$(slurp)" --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file" &
     ;;
 w)
     echo "正在录制整个屏幕..."
-    wl-screenrec --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file"
+    wl-screenrec --low-power off --codec av1 --audio --audio-codec flac --filename "$output_file" &
     ;;
 *)
     echo "无效参数：请传入 'q' 或 'w'"
@@ -27,4 +27,7 @@ w)
     ;;
 esac
 
-echo "录制完成，文件保存为：$output_file"
+# 保存进程 ID 到文件
+echo $! >/tmp/wl-screenrec.pid
+echo "录制已启动，进程 ID：$!"
+echo "录制文件将保存为：$output_file"

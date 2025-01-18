@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# 读取进程 ID
+if [ -f /tmp/wl-screenrec.pid ]; then
+  pid=$(cat /tmp/wl-screenrec.pid)
+  echo "正在停止录屏进程：$pid"
+  kill "$pid"
+  rm /tmp/wl-screenrec.pid
+  echo "录屏已停止"
+else
+  echo "没有正在运行的录屏进程"
+fi
