@@ -4,7 +4,7 @@
 
 [manager]
 ratio = [1, 4, 3]
-sort_by = "alphabetical"
+sort_by = "mtime"
 sort_sensitive = false
 sort_reverse = false
 sort_dir_first = true
@@ -30,10 +30,13 @@ ueberzug_scale = 1
 ueberzug_offset = [0, 0, 0, 0]
 
 [opener]
-image = [{ run = 'swappy -f "$1"', desc = "Image", for = "linux" }]
+image = [{ run = 'satty -f "$1"', desc = "Image", for = "linux" }]
 csv = [{ run = 'localc "$1"', desc = "csv", for = "linux" }]
 dir = [
     { run = 'cd "$@" && ${EDITOR:-vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+]
+code = [
+    { run = 'code "$@"', desc = "vscode", block = true, for = "unix" },
 ]
 edit = [
     { run = '${EDITOR:-vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
@@ -71,7 +74,7 @@ rules = [
     # directory
     { mime = "inode/directory", use = [
         "dir",
-        "reveal",
+        "code",
     ] },
     # Folder
     { name = "*/", use = [
@@ -261,3 +264,4 @@ sort_by = "none"
 sort_sensitive = false
 sort_reverse = false
 sort_translit = false
+
